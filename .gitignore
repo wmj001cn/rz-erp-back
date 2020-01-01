@@ -1,0 +1,10 @@
+build
+target
+/.classpath
+/.project
+/*.jar
+/mydb.db
+/lm.jar
+*.class
+*.db
+bin

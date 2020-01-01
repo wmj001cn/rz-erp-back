@@ -1,0 +1,100 @@
+25-12-2019 15:11:32.559 [main] INFO 
+				com.sqlite.RZERPApplication.logStarting - Starting RZERPApplication on N7RNAN1IS000010 with PID 72580 (D:\ns_zd\rz-erp\target\classes started by 0114804 in D:\ns_zd\rz-erp)
+25-12-2019 15:11:32.584 [main] DEBUG
+				com.sqlite.RZERPApplication.logStarting - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+25-12-2019 15:11:32.585 [main] INFO 
+				com.sqlite.RZERPApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+25-12-2019 15:11:44.532 [main] INFO 
+				com.sqlite.RZERPApplication.logStarted - Started RZERPApplication in 13.014 seconds (JVM running for 13.988)
+25-12-2019 15:16:39.682 [main] DEBUG
+				c.s.mapper.CityMapper.findByState.debug - ==>  Preparing: SELECT * FROM CITY WHERE state = ? 
+25-12-2019 15:18:57.247 [main] DEBUG
+				c.s.mapper.CityMapper.findByState.debug - ==>  Preparing: SELECT * FROM CITY WHERE state = ? 
+25-12-2019 15:18:57.331 [main] DEBUG
+				c.s.mapper.CityMapper.findByState.debug - ==> Parameters: usa(String)
+25-12-2019 15:18:57.354 [main] DEBUG
+				c.s.mapper.CityMapper.findByState.debug - <==      Total: 1
+25-12-2019 15:19:52.472 [main] DEBUG
+				c.s.mapper.CityMapper.findByState.debug - ==>  Preparing: SELECT * FROM CITY WHERE state = ? 
+25-12-2019 15:19:52.512 [main] DEBUG
+				c.s.mapper.CityMapper.findByState.debug - ==> Parameters: usa(String)
+25-12-2019 15:19:52.535 [main] DEBUG
+				c.s.mapper.CityMapper.findByState.debug - <==      Total: 1
+25-12-2019 16:04:18.104 [main] INFO 
+				com.sqlite.RZERPApplication.logStarting - Starting RZERPApplication on N7RNAN1IS000010 with PID 82212 (D:\ns_zd\rz-erp\target\classes started by 0114804 in D:\ns_zd\rz-erp)
+25-12-2019 16:04:18.123 [main] DEBUG
+				com.sqlite.RZERPApplication.logStarting - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+25-12-2019 16:04:18.124 [main] INFO 
+				com.sqlite.RZERPApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+25-12-2019 16:04:21.948 [main] ERROR
+				o.s.b.f.s.DefaultListableBeanFactory.destroyBean - Destroy method on bean with name 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor' threw an exception
+java.lang.IllegalStateException: ApplicationEventMulticaster not initialized - call 'refresh' before multicasting events via the context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7fcf2fc1: startup date [Wed Dec 25 16:04:18 CST 2019]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getApplicationEventMulticaster(AbstractApplicationContext.java:414)
+	at org.springframework.context.support.ApplicationListenerDetector.postProcessBeforeDestruction(ApplicationListenerDetector.java:97)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:253)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:961)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523)
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.destroySingletons(FactoryBeanRegistrySupport.java:230)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:968)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1030)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:556)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:134)
+	at com.sqlite.RZERPApplication.main(RZERPApplication.java:45)
+25-12-2019 16:04:21.949 [main] ERROR
+				o.s.b.f.s.DefaultListableBeanFactory.destroyBean - Destroy method on bean with name 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory' threw an exception
+java.lang.IllegalStateException: ApplicationEventMulticaster not initialized - call 'refresh' before multicasting events via the context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7fcf2fc1: startup date [Wed Dec 25 16:04:18 CST 2019]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getApplicationEventMulticaster(AbstractApplicationContext.java:414)
+	at org.springframework.context.support.ApplicationListenerDetector.postProcessBeforeDestruction(ApplicationListenerDetector.java:97)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:253)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:961)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523)
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.destroySingletons(FactoryBeanRegistrySupport.java:230)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:968)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1030)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:556)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:134)
+	at com.sqlite.RZERPApplication.main(RZERPApplication.java:45)
+25-12-2019 16:04:22.092 [main] ERROR
+				o.s.b.d.LoggingFailureAnalysisReporter.report - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method authorizationAttributeSourceAdvisor in org.apache.shiro.spring.boot.autoconfigure.ShiroAnnotationProcessorAutoConfiguration required a bean named 'authorizer' that could not be found.
+
+
+Action:
+
+Consider defining a bean named 'authorizer' in your configuration.
+
+25-12-2019 16:08:12.087 [main] INFO 
+				com.sqlite.RZERPApplication.logStarting - Starting RZERPApplication on N7RNAN1IS000010 with PID 93144 (D:\ns_zd\rz-erp\target\classes started by 0114804 in D:\ns_zd\rz-erp)
+25-12-2019 16:08:12.092 [main] DEBUG
+				com.sqlite.RZERPApplication.logStarting - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+25-12-2019 16:08:12.092 [main] INFO 
+				com.sqlite.RZERPApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+25-12-2019 16:08:26.482 [main] INFO 
+				com.sqlite.RZERPApplication.logStarted - Started RZERPApplication in 15.451 seconds (JVM running for 16.537)
+25-12-2019 17:27:58.083 [main] INFO 
+				com.sqlite.RZERPApplication.logStarting - Starting RZERPApplication on N7RNAN1IS000010 with PID 121252 (D:\ns_zd\rz-erp\target\classes started by 0114804 in D:\ns_zd\rz-erp)
+25-12-2019 17:27:58.088 [main] DEBUG
+				com.sqlite.RZERPApplication.logStarting - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+25-12-2019 17:27:58.089 [main] INFO 
+				com.sqlite.RZERPApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+25-12-2019 17:28:10.999 [main] INFO 
+				com.sqlite.RZERPApplication.logStarted - Started RZERPApplication in 13.716 seconds (JVM running for 14.695)

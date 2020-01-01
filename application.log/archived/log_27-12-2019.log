@@ -1,0 +1,683 @@
+27-12-2019 15:53:48.216 [main] INFO 
+				com.sqlite.entities.OrderTest.logStarting - Starting OrderTest on N7RNAN1IS000010 with PID 166152 (started by 0114804 in D:\ns_zd\rz-erp)
+27-12-2019 15:53:48.239 [main] DEBUG
+				com.sqlite.entities.OrderTest.logStarting - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+27-12-2019 15:53:48.240 [main] INFO 
+				com.sqlite.entities.OrderTest.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+27-12-2019 15:53:55.757 [main] ERROR
+				o.s.boot.SpringApplication.reportFailure - Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.DuplicateMappingException: Table [tbl_order_item] contains physical column name [order_id] referred to by multiple physical column names: [order_id], [orderId]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1078)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:857)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.hibernate.DuplicateMappingException: Table [tbl_order_item] contains physical column name [order_id] referred to by multiple physical column names: [order_id], [orderId]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl$TableColumnNameBinding.bindPhysicalToLogical(InFlightMetadataCollectorImpl.java:922)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl$TableColumnNameBinding.addBinding(InFlightMetadataCollectorImpl.java:891)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.addColumnNameBinding(InFlightMetadataCollectorImpl.java:961)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.addColumnNameBinding(InFlightMetadataCollectorImpl.java:942)
+	at org.hibernate.cfg.Ejb3JoinColumn.addColumnBinding(Ejb3JoinColumn.java:788)
+	at org.hibernate.cfg.Ejb3Column.linkWithValue(Ejb3Column.java:369)
+	at org.hibernate.cfg.annotations.TableBinder.linkJoinColumnWithValueOverridingNameIfImplicit(TableBinder.java:730)
+	at org.hibernate.cfg.annotations.TableBinder.bindFk(TableBinder.java:660)
+	at org.hibernate.cfg.ToOneFkSecondPass.doSecondPass(ToOneFkSecondPass.java:101)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processEndOfQueue(InFlightMetadataCollectorImpl.java:1786)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processFkSecondPassesInOrder(InFlightMetadataCollectorImpl.java:1730)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1617)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:278)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:847)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:874)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:60)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:353)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:370)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:359)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	... 40 common frames omitted
+27-12-2019 15:53:55.761 [main] ERROR
+				o.s.test.context.TestContextManager.prepareTestInstance - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@7c1e2a9e] to prepare test instance [com.sqlite.entities.OrderTest@6ba0ee4a]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.DuplicateMappingException: Table [tbl_order_item] contains physical column name [order_id] referred to by multiple physical column names: [order_id], [orderId]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1078)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:857)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 25 common frames omitted
+Caused by: org.hibernate.DuplicateMappingException: Table [tbl_order_item] contains physical column name [order_id] referred to by multiple physical column names: [order_id], [orderId]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl$TableColumnNameBinding.bindPhysicalToLogical(InFlightMetadataCollectorImpl.java:922)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl$TableColumnNameBinding.addBinding(InFlightMetadataCollectorImpl.java:891)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.addColumnNameBinding(InFlightMetadataCollectorImpl.java:961)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.addColumnNameBinding(InFlightMetadataCollectorImpl.java:942)
+	at org.hibernate.cfg.Ejb3JoinColumn.addColumnBinding(Ejb3JoinColumn.java:788)
+	at org.hibernate.cfg.Ejb3Column.linkWithValue(Ejb3Column.java:369)
+	at org.hibernate.cfg.annotations.TableBinder.linkJoinColumnWithValueOverridingNameIfImplicit(TableBinder.java:730)
+	at org.hibernate.cfg.annotations.TableBinder.bindFk(TableBinder.java:660)
+	at org.hibernate.cfg.ToOneFkSecondPass.doSecondPass(ToOneFkSecondPass.java:101)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processEndOfQueue(InFlightMetadataCollectorImpl.java:1786)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processFkSecondPassesInOrder(InFlightMetadataCollectorImpl.java:1730)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1617)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:278)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:847)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:874)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:60)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:353)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:370)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:359)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	... 40 common frames omitted
+27-12-2019 15:58:26.217 [main] INFO 
+				com.sqlite.entities.OrderTest.logStarting - Starting OrderTest on N7RNAN1IS000010 with PID 160540 (started by 0114804 in D:\ns_zd\rz-erp)
+27-12-2019 15:58:26.220 [main] DEBUG
+				com.sqlite.entities.OrderTest.logStarting - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+27-12-2019 15:58:26.221 [main] INFO 
+				com.sqlite.entities.OrderTest.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+27-12-2019 15:58:43.836 [main] ERROR
+				o.m.spring.mapper.MapperFactoryBean.checkDaoConfig - Error while adding the mapper 'interface com.sqlite.mapper.CityMapper' to configuration.
+org.apache.ibatis.builder.BuilderException: Could not find value method on SQL annotation.  Cause: java.lang.reflect.InvocationTargetException
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.getSqlSourceFromAnnotations(MapperAnnotationBuilder.java:472)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parseStatement(MapperAnnotationBuilder.java:289)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:134)
+	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
+	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:741)
+	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:80)
+	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:742)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.getSqlSourceFromAnnotations(MapperAnnotationBuilder.java:464)
+	... 48 common frames omitted
+Caused by: java.lang.annotation.IncompleteAnnotationException: org.apache.ibatis.annotations.Insert missing element value
+	at sun.reflect.annotation.AnnotationInvocationHandler.invoke(AnnotationInvocationHandler.java:80)
+	at com.sun.proxy.$Proxy120.value(Unknown Source)
+	... 53 common frames omitted
+27-12-2019 15:58:43.872 [main] ERROR
+				o.s.boot.SpringApplication.reportFailure - Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cityMapper' defined in file [D:\ns_zd\rz-erp\target\classes\com\sqlite\mapper\CityMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: org.apache.ibatis.builder.BuilderException: Could not find value method on SQL annotation.  Cause: java.lang.reflect.InvocationTargetException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:742)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: java.lang.IllegalArgumentException: org.apache.ibatis.builder.BuilderException: Could not find value method on SQL annotation.  Cause: java.lang.reflect.InvocationTargetException
+	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:83)
+	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	... 40 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Could not find value method on SQL annotation.  Cause: java.lang.reflect.InvocationTargetException
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.getSqlSourceFromAnnotations(MapperAnnotationBuilder.java:472)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parseStatement(MapperAnnotationBuilder.java:289)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:134)
+	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
+	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:741)
+	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:80)
+	... 43 common frames omitted
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.getSqlSourceFromAnnotations(MapperAnnotationBuilder.java:464)
+	... 48 common frames omitted
+Caused by: java.lang.annotation.IncompleteAnnotationException: org.apache.ibatis.annotations.Insert missing element value
+	at sun.reflect.annotation.AnnotationInvocationHandler.invoke(AnnotationInvocationHandler.java:80)
+	at com.sun.proxy.$Proxy120.value(Unknown Source)
+	... 53 common frames omitted
+27-12-2019 15:58:43.874 [main] ERROR
+				o.s.test.context.TestContextManager.prepareTestInstance - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@7c1e2a9e] to prepare test instance [com.sqlite.entities.OrderTest@44a0e68f]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cityMapper' defined in file [D:\ns_zd\rz-erp\target\classes\com\sqlite\mapper\CityMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: org.apache.ibatis.builder.BuilderException: Could not find value method on SQL annotation.  Cause: java.lang.reflect.InvocationTargetException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:742)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 25 common frames omitted
+Caused by: java.lang.IllegalArgumentException: org.apache.ibatis.builder.BuilderException: Could not find value method on SQL annotation.  Cause: java.lang.reflect.InvocationTargetException
+	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:83)
+	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	... 40 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Could not find value method on SQL annotation.  Cause: java.lang.reflect.InvocationTargetException
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.getSqlSourceFromAnnotations(MapperAnnotationBuilder.java:472)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parseStatement(MapperAnnotationBuilder.java:289)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:134)
+	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
+	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:741)
+	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:80)
+	... 43 common frames omitted
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.getSqlSourceFromAnnotations(MapperAnnotationBuilder.java:464)
+	... 48 common frames omitted
+Caused by: java.lang.annotation.IncompleteAnnotationException: org.apache.ibatis.annotations.Insert missing element value
+	at sun.reflect.annotation.AnnotationInvocationHandler.invoke(AnnotationInvocationHandler.java:80)
+	at com.sun.proxy.$Proxy120.value(Unknown Source)
+	... 53 common frames omitted
+27-12-2019 16:05:24.286 [main] INFO 
+				com.sqlite.entities.OrderTest.logStarting - Starting OrderTest on N7RNAN1IS000010 with PID 167980 (started by 0114804 in D:\ns_zd\rz-erp)
+27-12-2019 16:05:24.289 [main] DEBUG
+				com.sqlite.entities.OrderTest.logStarting - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+27-12-2019 16:05:24.289 [main] INFO 
+				com.sqlite.entities.OrderTest.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+27-12-2019 16:05:43.086 [main] INFO 
+				com.sqlite.entities.OrderTest.logStarted - Started OrderTest in 19.491 seconds (JVM running for 20.661)
+27-12-2019 16:05:43.269 [main] DEBUG
+				org.hibernate.SQL.logStatement - select order0_.id as id1_4_0_, order0_.client_id as client_i2_4_0_, order0_.date as date3_4_0_, order0_.order_num as order_nu4_4_0_, order0_.status as status5_4_0_, order0_.summary as summary6_4_0_, order0_.tax_rate as tax_rate7_4_0_, order0_.total as total8_4_0_ from tbl_order_copy1 order0_ where order0_.id=?
+27-12-2019 16:05:43.295 [main] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [INTEGER] - [52]
+27-12-2019 16:06:30.353 [main] INFO 
+				com.sqlite.entities.OrderTest.logStarting - Starting OrderTest on N7RNAN1IS000010 with PID 165552 (started by 0114804 in D:\ns_zd\rz-erp)
+27-12-2019 16:06:30.356 [main] DEBUG
+				com.sqlite.entities.OrderTest.logStarting - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+27-12-2019 16:06:30.356 [main] INFO 
+				com.sqlite.entities.OrderTest.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+27-12-2019 16:06:49.230 [main] INFO 
+				com.sqlite.entities.OrderTest.logStarted - Started OrderTest in 19.714 seconds (JVM running for 21.042)
+27-12-2019 16:06:49.346 [main] DEBUG
+				org.hibernate.SQL.logStatement - select order0_.id as id1_4_0_, order0_.client_id as client_i2_4_0_, order0_.date as date3_4_0_, order0_.order_num as order_nu4_4_0_, order0_.status as status5_4_0_, order0_.summary as summary6_4_0_, order0_.tax_rate as tax_rate7_4_0_, order0_.total as total8_4_0_ from tbl_order_copy1 order0_ where order0_.id=?
+27-12-2019 16:06:49.369 [main] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [INTEGER] - [52]
+27-12-2019 16:31:42.511 [main] INFO 
+				com.sqlite.entities.OrderTest.logStarting - Starting OrderTest on N7RNAN1IS000010 with PID 175772 (started by 0114804 in D:\ns_zd\rz-erp)
+27-12-2019 16:31:42.513 [main] DEBUG
+				com.sqlite.entities.OrderTest.logStarting - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+27-12-2019 16:31:42.514 [main] INFO 
+				com.sqlite.entities.OrderTest.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+27-12-2019 16:32:00.390 [main] INFO 
+				com.sqlite.entities.OrderTest.logStarted - Started OrderTest in 18.662 seconds (JVM running for 20.034)
+27-12-2019 16:32:00.574 [main] DEBUG
+				org.hibernate.SQL.logStatement - select order0_.id as id1_4_0_, order0_.client_id as client_i2_4_0_, order0_.date as date3_4_0_, order0_.order_num as order_nu4_4_0_, order0_.status as status5_4_0_, order0_.summary as summary6_4_0_, order0_.tax_rate as tax_rate7_4_0_, order0_.total as total8_4_0_ from tbl_order_copy1 order0_ where order0_.id=?
+27-12-2019 16:32:00.625 [main] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [INTEGER] - [52]
+27-12-2019 16:33:07.097 [main] INFO 
+				com.sqlite.entities.OrderTest.logStarting - Starting OrderTest on N7RNAN1IS000010 with PID 173116 (started by 0114804 in D:\ns_zd\rz-erp)
+27-12-2019 16:33:07.099 [main] DEBUG
+				com.sqlite.entities.OrderTest.logStarting - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+27-12-2019 16:33:07.100 [main] INFO 
+				com.sqlite.entities.OrderTest.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+27-12-2019 16:33:26.011 [main] INFO 
+				com.sqlite.entities.OrderTest.logStarted - Started OrderTest in 19.724 seconds (JVM running for 20.977)
+27-12-2019 16:33:26.165 [main] DEBUG
+				org.hibernate.SQL.logStatement - select order0_.id as id1_4_0_, order0_.client_id as client_i2_4_0_, order0_.date as date3_4_0_, order0_.order_num as order_nu4_4_0_, order0_.status as status5_4_0_, order0_.summary as summary6_4_0_, order0_.tax_rate as tax_rate7_4_0_, order0_.total as total8_4_0_ from tbl_order_copy1 order0_ where order0_.id=?
+27-12-2019 16:33:26.190 [main] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [INTEGER] - [52]
+27-12-2019 19:30:02.420 [main] INFO 
+				com.sqlite.RZERPApplication.logStarting - Starting RZERPApplication on N7RNAN1IS000010 with PID 29116 (D:\ns_zd\rz-erp\target\classes started by 0114804 in D:\ns_zd\rz-erp)
+27-12-2019 19:30:02.425 [main] DEBUG
+				com.sqlite.RZERPApplication.logStarting - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+27-12-2019 19:30:02.426 [main] INFO 
+				com.sqlite.RZERPApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+27-12-2019 19:30:17.423 [main] INFO 
+				com.sqlite.RZERPApplication.logStarted - Started RZERPApplication in 15.933 seconds (JVM running for 17.356)
+27-12-2019 19:33:00.639 [http-nio-8082-exec-10] DEBUG
+				org.hibernate.SQL.logStatement - select order0_.id as id1_4_, order0_.client_id as client_i2_4_, order0_.date as date3_4_, order0_.order_num as order_nu4_4_, order0_.status as status5_4_, order0_.summary as summary6_4_, order0_.tax_rate as tax_rate7_4_, order0_.total as total8_4_ from tbl_order_copy1 order0_ where order0_.status in (? , ? , ? , ? , ?) order by order0_.date desc
+27-12-2019 19:33:00.639 [http-nio-8082-exec-9] DEBUG
+				org.hibernate.SQL.logStatement - select order0_.id as id1_4_, order0_.client_id as client_i2_4_, order0_.date as date3_4_, order0_.order_num as order_nu4_4_, order0_.status as status5_4_, order0_.summary as summary6_4_, order0_.tax_rate as tax_rate7_4_, order0_.total as total8_4_ from tbl_order_copy1 order0_ where order0_.status in (? , ? , ? , ? , ?) order by order0_.date desc
+27-12-2019 19:33:00.683 [http-nio-8082-exec-10] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [INTEGER] - [100]
+27-12-2019 19:33:00.684 [http-nio-8082-exec-10] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [2] as [INTEGER] - [201]
+27-12-2019 19:33:00.683 [http-nio-8082-exec-9] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [INTEGER] - [100]
+27-12-2019 19:33:00.685 [http-nio-8082-exec-10] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [3] as [INTEGER] - [200]
+27-12-2019 19:33:00.686 [http-nio-8082-exec-10] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [4] as [INTEGER] - [300]
+27-12-2019 19:33:00.685 [http-nio-8082-exec-9] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [2] as [INTEGER] - [201]
+27-12-2019 19:33:00.686 [http-nio-8082-exec-10] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [5] as [INTEGER] - [400]
+27-12-2019 19:33:00.687 [http-nio-8082-exec-9] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [3] as [INTEGER] - [200]
+27-12-2019 19:33:00.689 [http-nio-8082-exec-9] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [4] as [INTEGER] - [300]
+27-12-2019 19:33:00.690 [http-nio-8082-exec-9] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [5] as [INTEGER] - [400]
+27-12-2019 19:33:00.798 [http-nio-8082-exec-9] DEBUG
+				org.hibernate.SQL.logStatement - select count(order0_.id) as col_0_0_ from tbl_order_copy1 order0_ where order0_.status in (? , ? , ? , ? , ?)
+27-12-2019 19:33:00.800 [http-nio-8082-exec-10] DEBUG
+				org.hibernate.SQL.logStatement - select count(order0_.id) as col_0_0_ from tbl_order_copy1 order0_ where order0_.status in (? , ? , ? , ? , ?)
+27-12-2019 19:33:00.822 [http-nio-8082-exec-9] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [INTEGER] - [100]
+27-12-2019 19:33:00.822 [http-nio-8082-exec-10] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [INTEGER] - [100]
+27-12-2019 19:33:00.823 [http-nio-8082-exec-9] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [2] as [INTEGER] - [201]
+27-12-2019 19:33:00.823 [http-nio-8082-exec-10] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [2] as [INTEGER] - [201]
+27-12-2019 19:33:00.824 [http-nio-8082-exec-9] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [3] as [INTEGER] - [200]
+27-12-2019 19:33:00.825 [http-nio-8082-exec-10] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [3] as [INTEGER] - [200]
+27-12-2019 19:33:00.825 [http-nio-8082-exec-9] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [4] as [INTEGER] - [300]
+27-12-2019 19:33:00.826 [http-nio-8082-exec-10] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [4] as [INTEGER] - [300]
+27-12-2019 19:33:00.826 [http-nio-8082-exec-9] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [5] as [INTEGER] - [400]
+27-12-2019 19:33:00.827 [http-nio-8082-exec-10] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [5] as [INTEGER] - [400]
+27-12-2019 19:33:00.878 [http-nio-8082-exec-9] DEBUG
+				org.hibernate.SQL.logStatement - select orderitems0_.order_id as order_id5_5_0_, orderitems0_.id as id1_5_0_, orderitems0_.id as id1_5_1_, orderitems0_.name as name2_5_1_, orderitems0_.order_id as order_id5_5_1_, orderitems0_.qty as qty3_5_1_, orderitems0_.sale_price as sale_pri4_5_1_ from tbl_order_item orderitems0_ where orderitems0_.order_id=?
+27-12-2019 19:33:00.881 [http-nio-8082-exec-9] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [INTEGER] - [57]
+27-12-2019 19:33:00.883 [http-nio-8082-exec-10] DEBUG
+				org.hibernate.SQL.logStatement - select orderitems0_.order_id as order_id5_5_0_, orderitems0_.id as id1_5_0_, orderitems0_.id as id1_5_1_, orderitems0_.name as name2_5_1_, orderitems0_.order_id as order_id5_5_1_, orderitems0_.qty as qty3_5_1_, orderitems0_.sale_price as sale_pri4_5_1_ from tbl_order_item orderitems0_ where orderitems0_.order_id=?
+27-12-2019 19:33:00.889 [http-nio-8082-exec-10] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [INTEGER] - [57]
+27-12-2019 19:33:00.969 [http-nio-8082-exec-3] DEBUG
+				org.hibernate.SQL.logStatement - select order0_.id as id1_4_, order0_.client_id as client_i2_4_, order0_.date as date3_4_, order0_.order_num as order_nu4_4_, order0_.status as status5_4_, order0_.summary as summary6_4_, order0_.tax_rate as tax_rate7_4_, order0_.total as total8_4_ from tbl_order_copy1 order0_ where order0_.status in (? , ? , ? , ? , ?) order by order0_.date desc
+27-12-2019 19:33:00.970 [http-nio-8082-exec-3] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [INTEGER] - [100]
+27-12-2019 19:33:00.971 [http-nio-8082-exec-3] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [2] as [INTEGER] - [201]
+27-12-2019 19:33:00.972 [http-nio-8082-exec-3] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [3] as [INTEGER] - [200]
+27-12-2019 19:33:00.973 [http-nio-8082-exec-3] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [4] as [INTEGER] - [300]
+27-12-2019 19:33:00.976 [http-nio-8082-exec-3] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [5] as [INTEGER] - [400]
+27-12-2019 19:33:00.982 [http-nio-8082-exec-3] DEBUG
+				org.hibernate.SQL.logStatement - select count(order0_.id) as col_0_0_ from tbl_order_copy1 order0_ where order0_.status in (? , ? , ? , ? , ?)
+27-12-2019 19:33:00.983 [http-nio-8082-exec-3] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [INTEGER] - [100]
+27-12-2019 19:33:00.984 [http-nio-8082-exec-3] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [2] as [INTEGER] - [201]
+27-12-2019 19:33:00.985 [http-nio-8082-exec-3] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [3] as [INTEGER] - [200]
+27-12-2019 19:33:00.986 [http-nio-8082-exec-3] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [4] as [INTEGER] - [300]
+27-12-2019 19:33:00.987 [http-nio-8082-exec-3] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [5] as [INTEGER] - [400]
+27-12-2019 19:33:00.991 [http-nio-8082-exec-3] DEBUG
+				org.hibernate.SQL.logStatement - select orderitems0_.order_id as order_id5_5_0_, orderitems0_.id as id1_5_0_, orderitems0_.id as id1_5_1_, orderitems0_.name as name2_5_1_, orderitems0_.order_id as order_id5_5_1_, orderitems0_.qty as qty3_5_1_, orderitems0_.sale_price as sale_pri4_5_1_ from tbl_order_item orderitems0_ where orderitems0_.order_id=?
+27-12-2019 19:33:00.992 [http-nio-8082-exec-3] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [INTEGER] - [57]
+27-12-2019 19:33:58.412 [http-nio-8082-exec-1] DEBUG
+				org.hibernate.SQL.logStatement - select order0_.id as id1_4_, order0_.client_id as client_i2_4_, order0_.date as date3_4_, order0_.order_num as order_nu4_4_, order0_.status as status5_4_, order0_.summary as summary6_4_, order0_.tax_rate as tax_rate7_4_, order0_.total as total8_4_ from tbl_order_copy1 order0_ where order0_.status in (? , ? , ? , ? , ?) order by order0_.date desc
+27-12-2019 19:33:58.413 [http-nio-8082-exec-1] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [INTEGER] - [100]
+27-12-2019 19:33:58.414 [http-nio-8082-exec-1] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [2] as [INTEGER] - [201]
+27-12-2019 19:33:58.415 [http-nio-8082-exec-1] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [3] as [INTEGER] - [200]
+27-12-2019 19:33:58.416 [http-nio-8082-exec-1] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [4] as [INTEGER] - [300]
+27-12-2019 19:33:58.416 [http-nio-8082-exec-1] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [5] as [INTEGER] - [400]
+27-12-2019 19:33:58.427 [http-nio-8082-exec-1] DEBUG
+				org.hibernate.SQL.logStatement - select count(order0_.id) as col_0_0_ from tbl_order_copy1 order0_ where order0_.status in (? , ? , ? , ? , ?)
+27-12-2019 19:33:58.428 [http-nio-8082-exec-1] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [INTEGER] - [100]
+27-12-2019 19:33:58.432 [http-nio-8082-exec-1] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [2] as [INTEGER] - [201]
+27-12-2019 19:33:58.433 [http-nio-8082-exec-1] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [3] as [INTEGER] - [200]
+27-12-2019 19:33:58.434 [http-nio-8082-exec-1] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [4] as [INTEGER] - [300]
+27-12-2019 19:33:58.435 [http-nio-8082-exec-1] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [5] as [INTEGER] - [400]
+27-12-2019 19:33:58.439 [http-nio-8082-exec-1] DEBUG
+				org.hibernate.SQL.logStatement - select orderitems0_.order_id as order_id5_5_0_, orderitems0_.id as id1_5_0_, orderitems0_.id as id1_5_1_, orderitems0_.name as name2_5_1_, orderitems0_.order_id as order_id5_5_1_, orderitems0_.qty as qty3_5_1_, orderitems0_.sale_price as sale_pri4_5_1_ from tbl_order_item orderitems0_ where orderitems0_.order_id=?
+27-12-2019 19:33:58.441 [http-nio-8082-exec-1] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [INTEGER] - [57]
+27-12-2019 19:34:45.223 [main] INFO 
+				com.sqlite.RZERPApplication.logStarting - Starting RZERPApplication on N7RNAN1IS000010 with PID 43652 (D:\ns_zd\rz-erp\target\classes started by 0114804 in D:\ns_zd\rz-erp)
+27-12-2019 19:34:45.228 [main] DEBUG
+				com.sqlite.RZERPApplication.logStarting - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+27-12-2019 19:34:45.256 [main] INFO 
+				com.sqlite.RZERPApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+27-12-2019 19:34:57.479 [main] INFO 
+				com.sqlite.RZERPApplication.logStarted - Started RZERPApplication in 13.112 seconds (JVM running for 13.999)
+27-12-2019 19:35:45.789 [http-nio-8082-exec-5] DEBUG
+				org.hibernate.SQL.logStatement - select order0_.id as id1_4_, order0_.client_id as client_i2_4_, order0_.date as date3_4_, order0_.order_num as order_nu4_4_, order0_.status as status5_4_, order0_.summary as summary6_4_, order0_.tax_rate as tax_rate7_4_, order0_.total as total8_4_ from tbl_order_copy1 order0_ where order0_.status in (? , ? , ? , ? , ?) order by order0_.date desc
+27-12-2019 19:35:45.791 [http-nio-8082-exec-3] DEBUG
+				org.hibernate.SQL.logStatement - select order0_.id as id1_4_, order0_.client_id as client_i2_4_, order0_.date as date3_4_, order0_.order_num as order_nu4_4_, order0_.status as status5_4_, order0_.summary as summary6_4_, order0_.tax_rate as tax_rate7_4_, order0_.total as total8_4_ from tbl_order_copy1 order0_ where order0_.status in (? , ? , ? , ? , ?) order by order0_.date desc
+27-12-2019 19:35:45.814 [http-nio-8082-exec-3] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [INTEGER] - [100]
+27-12-2019 19:35:45.814 [http-nio-8082-exec-5] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [INTEGER] - [100]
+27-12-2019 19:35:45.816 [http-nio-8082-exec-3] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [2] as [INTEGER] - [201]
+27-12-2019 19:35:45.817 [http-nio-8082-exec-3] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [3] as [INTEGER] - [200]
+27-12-2019 19:35:45.817 [http-nio-8082-exec-3] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [4] as [INTEGER] - [300]
+27-12-2019 19:35:45.816 [http-nio-8082-exec-5] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [2] as [INTEGER] - [201]
+27-12-2019 19:35:45.818 [http-nio-8082-exec-3] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [5] as [INTEGER] - [400]
+27-12-2019 19:35:45.819 [http-nio-8082-exec-5] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [3] as [INTEGER] - [200]
+27-12-2019 19:35:45.821 [http-nio-8082-exec-5] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [4] as [INTEGER] - [300]
+27-12-2019 19:35:45.821 [http-nio-8082-exec-5] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [5] as [INTEGER] - [400]
+27-12-2019 19:35:45.880 [http-nio-8082-exec-3] DEBUG
+				org.hibernate.SQL.logStatement - select count(order0_.id) as col_0_0_ from tbl_order_copy1 order0_ where order0_.status in (? , ? , ? , ? , ?)
+27-12-2019 19:35:45.881 [http-nio-8082-exec-3] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [INTEGER] - [100]
+27-12-2019 19:35:45.882 [http-nio-8082-exec-3] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [2] as [INTEGER] - [201]
+27-12-2019 19:35:45.884 [http-nio-8082-exec-3] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [3] as [INTEGER] - [200]
+27-12-2019 19:35:45.885 [http-nio-8082-exec-3] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [4] as [INTEGER] - [300]
+27-12-2019 19:35:45.885 [http-nio-8082-exec-3] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [5] as [INTEGER] - [400]
+27-12-2019 19:35:45.888 [http-nio-8082-exec-5] DEBUG
+				org.hibernate.SQL.logStatement - select count(order0_.id) as col_0_0_ from tbl_order_copy1 order0_ where order0_.status in (? , ? , ? , ? , ?)
+27-12-2019 19:35:45.899 [http-nio-8082-exec-5] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [INTEGER] - [100]
+27-12-2019 19:35:45.902 [http-nio-8082-exec-5] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [2] as [INTEGER] - [201]
+27-12-2019 19:35:45.904 [http-nio-8082-exec-5] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [3] as [INTEGER] - [200]
+27-12-2019 19:35:45.905 [http-nio-8082-exec-5] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [4] as [INTEGER] - [300]
+27-12-2019 19:35:45.906 [http-nio-8082-exec-5] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [5] as [INTEGER] - [400]
+27-12-2019 19:35:45.956 [http-nio-8082-exec-4] DEBUG
+				org.hibernate.SQL.logStatement - select order0_.id as id1_4_, order0_.client_id as client_i2_4_, order0_.date as date3_4_, order0_.order_num as order_nu4_4_, order0_.status as status5_4_, order0_.summary as summary6_4_, order0_.tax_rate as tax_rate7_4_, order0_.total as total8_4_ from tbl_order_copy1 order0_ where order0_.status in (? , ? , ? , ? , ?) order by order0_.date desc
+27-12-2019 19:35:45.957 [http-nio-8082-exec-4] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [INTEGER] - [100]
+27-12-2019 19:35:45.958 [http-nio-8082-exec-4] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [2] as [INTEGER] - [201]
+27-12-2019 19:35:45.959 [http-nio-8082-exec-4] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [3] as [INTEGER] - [200]
+27-12-2019 19:35:45.959 [http-nio-8082-exec-4] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [4] as [INTEGER] - [300]
+27-12-2019 19:35:45.960 [http-nio-8082-exec-4] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [5] as [INTEGER] - [400]
+27-12-2019 19:35:45.968 [http-nio-8082-exec-4] DEBUG
+				org.hibernate.SQL.logStatement - select count(order0_.id) as col_0_0_ from tbl_order_copy1 order0_ where order0_.status in (? , ? , ? , ? , ?)
+27-12-2019 19:35:45.969 [http-nio-8082-exec-4] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [INTEGER] - [100]
+27-12-2019 19:35:45.970 [http-nio-8082-exec-4] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [2] as [INTEGER] - [201]
+27-12-2019 19:35:45.971 [http-nio-8082-exec-4] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [3] as [INTEGER] - [200]
+27-12-2019 19:35:45.971 [http-nio-8082-exec-4] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [4] as [INTEGER] - [300]
+27-12-2019 19:35:45.972 [http-nio-8082-exec-4] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [5] as [INTEGER] - [400]
+27-12-2019 19:35:50.106 [http-nio-8082-exec-10] DEBUG
+				org.hibernate.SQL.logStatement - select order0_.id as id1_4_, order0_.client_id as client_i2_4_, order0_.date as date3_4_, order0_.order_num as order_nu4_4_, order0_.status as status5_4_, order0_.summary as summary6_4_, order0_.tax_rate as tax_rate7_4_, order0_.total as total8_4_ from tbl_order_copy1 order0_ where order0_.status in (?) order by order0_.date desc
+27-12-2019 19:35:50.107 [http-nio-8082-exec-10] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [INTEGER] - [200]
+27-12-2019 19:35:50.904 [http-nio-8082-exec-8] DEBUG
+				org.hibernate.SQL.logStatement - select order0_.id as id1_4_, order0_.client_id as client_i2_4_, order0_.date as date3_4_, order0_.order_num as order_nu4_4_, order0_.status as status5_4_, order0_.summary as summary6_4_, order0_.tax_rate as tax_rate7_4_, order0_.total as total8_4_ from tbl_order_copy1 order0_ where order0_.status in (? , ?) order by order0_.date desc
+27-12-2019 19:35:50.905 [http-nio-8082-exec-8] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [INTEGER] - [100]
+27-12-2019 19:35:50.911 [http-nio-8082-exec-8] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [2] as [INTEGER] - [201]
+27-12-2019 19:35:52.773 [http-nio-8082-exec-1] DEBUG
+				org.hibernate.SQL.logStatement - SELECT
+	p.name,
+	COALESCE(oi.sale_price, p.sale_price) as sale_price,
+	oi.id,
+	oi.qty,
+	oi.order_id
+FROM
+	tbl_order_item oi
+JOIN tbl_order_copy1 o ON oi.order_id = o.id
+JOIN tbl_product p ON oi.product_id = p.id
+WHERE
+	o.id = ?
+27-12-2019 19:35:52.777 [http-nio-8082-exec-1] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [VARCHAR] - [58]
+27-12-2019 19:35:54.262 [http-nio-8082-exec-2] DEBUG
+				org.hibernate.SQL.logStatement - SELECT
+	p.name,
+	COALESCE(oi.sale_price, p.sale_price) as sale_price,
+	oi.id,
+	oi.qty,
+	oi.order_id
+FROM
+	tbl_order_item oi
+JOIN tbl_order_copy1 o ON oi.order_id = o.id
+JOIN tbl_product p ON oi.product_id = p.id
+WHERE
+	o.id = ?
+27-12-2019 19:35:54.264 [http-nio-8082-exec-2] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [VARCHAR] - [58]
+27-12-2019 19:35:54.913 [http-nio-8082-exec-5] DEBUG
+				org.hibernate.SQL.logStatement - SELECT
+	p.name,
+	COALESCE(oi.sale_price, p.sale_price) as sale_price,
+	oi.id,
+	oi.qty,
+	oi.order_id
+FROM
+	tbl_order_item oi
+JOIN tbl_order_copy1 o ON oi.order_id = o.id
+JOIN tbl_product p ON oi.product_id = p.id
+WHERE
+	o.id = ?
+27-12-2019 19:35:54.914 [http-nio-8082-exec-5] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [VARCHAR] - [58]
+27-12-2019 19:36:07.247 [http-nio-8082-exec-9] DEBUG
+				org.hibernate.SQL.logStatement - SELECT
+	p.name,
+	COALESCE(oi.sale_price, p.sale_price) as sale_price,
+	oi.id,
+	oi.qty,
+	oi.order_id
+FROM
+	tbl_order_item oi
+JOIN tbl_order_copy1 o ON oi.order_id = o.id
+JOIN tbl_product p ON oi.product_id = p.id
+WHERE
+	o.id = ?
+27-12-2019 19:36:07.248 [http-nio-8082-exec-9] TRACE
+				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [VARCHAR] - [58]
+27-12-2019 19:36:07.297 [http-nio-8082-exec-7] DEBUG
+				c.s.P.findProductClientInventoryInfoByOrderId.debug - ==>  Preparing: SELECT coalesce(ci.inventory_code, p.name) as inventoryCode, coalesce(ci.description, p.name) as description, oi.qty, p.unit, p.type, p.id FROM tbl_order_copy1 o JOIN tbl_order_item oi ON o.id = oi.order_id JOIN tbl_product p ON oi.product_id = p.id LEFT JOIN tbl_client_inventory ci ON p.id = ci.product_id AND ci.client_id = o.client_id WHERE o.id = ? 
+27-12-2019 19:36:07.311 [http-nio-8082-exec-7] DEBUG
+				c.s.P.findProductClientInventoryInfoByOrderId.debug - ==> Parameters: 58(String)
+27-12-2019 19:36:07.335 [http-nio-8082-exec-7] DEBUG
+				c.s.P.findProductClientInventoryInfoByOrderId.debug - <==      Total: 2
+27-12-2019 19:36:07.432 [http-nio-8082-exec-7] DEBUG
+				c.s.P.findDeliveryInfoByClientId.debug - ==>  Preparing: SELECT cc.contact, coalesce(cc.addr, c.addr) as addr, cc.tel, c.tel as clientTel, c.name as clientName, c.addr as cAddr, c.tax_number as taxNumber, c.bank as bank, c.bank_account as bankAccount FROM tbl_client_contact cc join tbl_client c on cc.client_id = c.id WHERE cc.role = 'CONSIGNER' AND cc.client_id = ? AND cc.isDefault = 1 
+27-12-2019 19:36:07.432 [http-nio-8082-exec-7] DEBUG
+				c.s.P.findDeliveryInfoByClientId.debug - ==> Parameters: 1(String)
+27-12-2019 19:36:07.434 [http-nio-8082-exec-7] DEBUG
+				c.s.P.findDeliveryInfoByClientId.debug - <==      Total: 1
