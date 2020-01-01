@@ -27515,3 +27515,11 @@ WHERE
 				o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [INTEGER] - [66]
 01-01-2020 19:46:35.781 [http-nio-8082-exec-10] DEBUG
 				org.hibernate.SQL.logStatement - select count(order0_.id) as col_0_0_ from tbl_order_copy1_test order0_ where (order0_.status in (100 , 200 , 300 , 400)) and (order0_.status in (100 , 200 , 300 , 400))
+01-01-2020 20:25:27.586 [main] INFO 
+				com.sqlite.RZERPApplication.logStarting - Starting RZERPApplication on N7RNAN1IS000010 with PID 8320 (E:\code\rz-erp-back\target\classes started by 0114804 in E:\code\rz-erp-back)
+01-01-2020 20:25:27.586 [main] DEBUG
+				com.sqlite.RZERPApplication.logStarting - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+01-01-2020 20:25:27.586 [main] INFO 
+				com.sqlite.RZERPApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+01-01-2020 20:25:40.421 [main] INFO 
+				com.sqlite.RZERPApplication.logStarted - Started RZERPApplication in 13.449 seconds (JVM running for 14.005)

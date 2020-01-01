@@ -13,7 +13,7 @@ public class DBConfig {
     public DataSource dataSource() {
         DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
         dataSourceBuilder.driverClassName("org.sqlite.JDBC");
-        dataSourceBuilder.url("jdbc:sqlite:D:\\ruuz\\rz_erp.db");
+        dataSourceBuilder.url("jdbc:sqlite:rz_erp.db");
         return dataSourceBuilder.build();
     }
 }
