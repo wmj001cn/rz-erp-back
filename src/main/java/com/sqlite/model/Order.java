@@ -41,6 +41,7 @@ public class Order implements Serializable{
     private Integer id;
     private Integer taxRate;
     
+    @Column(name="order_num")
     private String orderNum;
 
 	private String summary;
@@ -50,7 +51,7 @@ public class Order implements Serializable{
     
     private Integer status;
     
-    @Column
+    @Column(name="client_id")
     private String clientId;
     
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, fetch=FetchType.EAGER)
